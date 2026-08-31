@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Hub - Contacts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🚨 Emergency Hub</div>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="contacts.html" class="active">Emergency Contacts</a></li>
+
+        <li><a href="firstaid.html">First Aid</a></li>
+        <li>
+  <a href="emergency-guide.html">
+    Emergency Guide
+  </a>
+</li>
+        <li><a href="form.html">Report Emergency</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="firstaid" id="intro">
+    <h2>Emergency Contacts</h2>
+    <p style="margin-bottom: 15px;">
+      Below are the most important numbers to keep in mind during an emergency. Save these to your phone now, so you're not searching for them under pressure later.
+    </p>
+    <p>
+      If you're unsure which service to call, start with Police or Ambulance — they can redirect you to the right department if needed.
+    </p>
+  </section>
+
+<section class="contacts" id="contacts">
+    <h2>Primary Numbers</h2>
+
+<div class="search-box">
+  <input
+    type="text"
+    id="contactSearch"
+    placeholder="🔍 Search emergency service..."
+  >
+</div>
+
+<div class="contact-cards">
+      <div class="card">
+        <h3>Police</h3>
+        <p>15</p>
+        <p style="font-size: 0.85rem; margin-top: 8px;">For crimes, threats, accidents, or public safety concerns.</p>
+      </div>
+      <div class="card">
+        <h3>Ambulance</h3>
+        <p>1122</p>
+        <p style="font-size: 0.85rem; margin-top: 8px;">For medical emergencies, injuries, or when someone needs urgent transport to a hospital.</p>
+      </div>
+      <div class="card">
+        <h3>Fire Brigade</h3>
+        <p>16</p>
+        <p style="font-size: 0.85rem; margin-top: 8px;">For fires, gas leaks, or hazardous material incidents.</p>
+      </div>
+      <div class="card">
+        <h3>Poison Control</h3>
+        <p>111-222-333</p>
+        <p style="font-size: 0.85rem; margin-top: 8px;">For accidental poisoning, overdoses, or chemical exposure.</p>
+      </div>
+
+<div class="card">
+  <h3>Gas Complaint</h3>
+  <p>1199</p>
+  <p style="font-size: 0.85rem; margin-top: 8px;">For gas leaks or gas supply emergencies.</p>
+</div>
+<div class="card">
+  <h3>Electricity Complaint</h3>
+  <p>118</p>
+  <p style="font-size: 0.85rem; margin-top: 8px;">For power faults, downed lines, or electric shock hazards.</p>
+</div>
+
+    </div>
+  </section>
+
+  <section class="firstaid" id="tips">
+    <h2>What to Say When You Call</h2>
+    <ul>
+      <li>State the type of emergency clearly (medical, fire, crime, etc.)</li>
+      <li>Give your exact location, including landmarks if possible</li>
+      <li>Describe the number of people involved and their condition</li>
+      <li>Stay on the line until the operator tells you it's okay to hang up</li>
+    </ul>
+  </section>
+
+  <section class="nearby" id="nearby">
+    <h2>Nearby Hospitals & Shelters</h2>
+    <p style="max-width: 600px; margin: 0 auto 15px;">
+      When location access is enabled, this section will show hospitals, clinics, and shelters closest to you, along with directions.
+    </p>
+    <div id="nearbyList">
+      <p>Location services will show nearby help here.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Emergency Hub &copy; 2026</p>
+    <p><strong>Disclaimer:</strong> This site is not a substitute for official emergency services. Always call your local emergency number directly in a life-threatening situation.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
