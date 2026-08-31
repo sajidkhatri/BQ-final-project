@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Emergency Hub - Emergency Guide</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+
+  <header>
+
+    <div class="logo">🚨 Emergency Hub</div>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+
+    <nav>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <ul id="navLinks">
+
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="contacts.html">Emergency Contacts</a>
+        </li>
+
+        <li>
+          <a href="firstaid.html">First Aid</a>
+        </li>
+
+        <li>
+          <a href="emergency-guide.html" class="active">
+            Emergency Guide
+          </a>
+        </li>
+
+        <li>
+          <a href="checklist.html">Checklist</a>
+        </li>
+
+        <li>
+          <a href="form.html">Report Emergency</a>
+        </li>
+
+        <li>
+          <a href="about.html">About</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ===== INTRO ===== -->
+
+  <section class="firstaid">
+
+    <h2>🚨 Emergency Guide</h2>
+
+    <p>
+      Select an emergency category below to view basic guidance.
+      In a serious emergency, always contact official emergency services.
+    </p>
+
+  </section>
+
+
+  <!-- ===== CATEGORY SELECTOR ===== -->
+
+  <section class="category-section">
+
+    <h2>🔥 Select Emergency Category</h2>
+
+    <select id="emergencyCategory">
+
+      <option value="">
+        -- Select Emergency --
+      </option>
+
+      <option value="medical">
+        🚑 Medical Emergency
+      </option>
+
+      <option value="fire">
+        🔥 Fire Emergency
+      </option>
+
+      <option value="accident">
+        🚗 Road Accident
+      </option>
+
+      <option value="bleeding">
+        🩸 Severe Bleeding
+      </option>
+
+      <option value="electric">
+        ⚡ Electric Shock
+      </option>
+
+      <option value="gas">
+        ⛽ Gas Leakage
+      </option>
+
+    </select>
+
+
+    <!-- ===== DYNAMIC RESULT ===== -->
+
+    <div id="emergencyResult" class="emergency-result">
+
+      <h3>Choose a category above</h3>
+
+      <p>
+        Emergency information will appear here.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer>
+
+    <p>
+      Emergency Hub &copy; 2026
+    </p>
+
+    <p>
+      <strong>Disclaimer:</strong>
+      This site is not a substitute for official emergency services.
+      Always contact local emergency services during a real emergency.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
