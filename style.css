@@ -1,3 +1,289 @@
+/* <<<<<<< sajid-khatri */
+/* <<<<<<< Updated upstream */
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ===== COLOR THEME VARIABLES ===== */
+:root {
+  --emergency-red: #d32f2f;
+  --emergency-dark-red: #a52222;
+  --alert-orange: #ff6f00;
+  --safe-green: #2e7d32;
+  --dark-bg: #1c1c1c;
+  --light-bg: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #222222;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--emergency-red);
+  color: var(--text-light);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--alert-orange);
+}
+
+nav a.active {
+  color: var(--alert-orange);
+  border-bottom: 2px solid var(--alert-orange);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--emergency-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--alert-orange);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, var(--emergency-red), var(--emergency-dark-red));
+  color: var(--text-light);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn-emergency {
+  background-color: var(--alert-orange);
+  color: var(--text-light);
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,111,0,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(255,111,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,111,0,0); }
+}
+
+/* ===== EMERGENCY CONTACTS SECTION ===== */
+.contacts {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.contacts h2 {
+  color: var(--emergency-red);
+  margin-bottom: 30px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: var(--light-bg);
+  border-left: 6px solid var(--emergency-red);
+  padding: 20px;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: var(--emergency-dark-red);
+  margin-bottom: 8px;
+}
+
+/* ===== FIRST AID SECTION ===== */
+.firstaid {
+  background-color: var(--light-bg);
+  padding: 50px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.firstaid h2 {
+  color: var(--emergency-red);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.firstaid ul {
+  list-style: none;
+}
+
+.firstaid li {
+  background: #fff3f0;
+  border-left: 4px solid var(--alert-orange);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* ===== CALLOUT / NOTE BOX (used on Emergency Form page) ===== */
+.note-box {
+  background: #fff3e0;
+  border-left: 4px solid var(--alert-orange);
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* ===== FORM SECTION ===== */
+.emergency-form {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  padding: 50px 30px;
+}
+
+.emergency-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.emergency-form form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emergency-form input,
+.emergency-form textarea,
+.emergency-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-family: inherit;
+}
+
+.emergency-form button {
+  background-color: var(--emergency-red);
+  color: var(--text-light);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.emergency-form button:hover {
+  background-color: var(--alert-orange);
+}
+
+#formMessage {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== NEARBY SERVICES ===== */
+.nearby {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.nearby h2 {
+  color: var(--emergency-red);
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+body.dark-mode {
+  --light-bg: #1e1e1e;
+  --text-dark: #f0f0f0;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .card {
+  background: #2a2a2a;
+/* ======= */
 /* ===== RESET & BASE ===== */
 * {
   margin: 0;
@@ -635,9 +921,6 @@ body.dark-mode .card {
   font-size: 13px;
   color: #777;
 }
-/* ========================================
-   EMERGENCY REPORT FORM
-======================================== */
 
 .report-form {
   background: #ffffff;
@@ -703,4 +986,726 @@ body.dark-mode .card {
   text-align: center;
   font-weight: bold;
   margin-top: 10px;
+}
+/* Mobile Friendly */
+@media (max-width: 600px) {
+
+    body {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 95%;
+    }
+/* >>>>>>> Stashed changes */
+/* ======= */
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ===== COLOR THEME VARIABLES ===== */
+:root {
+  --emergency-red: #d32f2f;
+  --emergency-dark-red: #a52222;
+  --alert-orange: #ff6f00;
+  --safe-green: #2e7d32;
+  --dark-bg: #1c1c1c;
+  --light-bg: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #222222;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--emergency-red);
+  color: var(--text-light);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--alert-orange);
+}
+
+nav a.active {
+  color: var(--alert-orange);
+  border-bottom: 2px solid var(--alert-orange);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--emergency-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--alert-orange);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, var(--emergency-red), var(--emergency-dark-red));
+  color: var(--text-light);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn-emergency {
+  background-color: var(--alert-orange);
+  color: var(--text-light);
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,111,0,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(255,111,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,111,0,0); }
+}
+
+/* ===== EMERGENCY CONTACTS SECTION ===== */
+.contacts {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.contacts h2 {
+  color: var(--emergency-red);
+  margin-bottom: 30px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: var(--light-bg);
+  border-left: 6px solid var(--emergency-red);
+  padding: 20px;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: var(--emergency-dark-red);
+  margin-bottom: 8px;
+}
+
+/* ===== FIRST AID SECTION ===== */
+.firstaid {
+  background-color: var(--light-bg);
+  padding: 50px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.firstaid h2 {
+  color: var(--emergency-red);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.firstaid ul {
+  list-style: none;
+}
+
+.firstaid li {
+  background: #fff3f0;
+  border-left: 4px solid var(--alert-orange);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* ===== CALLOUT / NOTE BOX (used on Emergency Form page) ===== */
+.note-box {
+  background: #fff3e0;
+  border-left: 4px solid var(--alert-orange);
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* ===== FORM SECTION ===== */
+.emergency-form {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  padding: 50px 30px;
+}
+
+.emergency-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.emergency-form form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emergency-form input,
+.emergency-form textarea,
+.emergency-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-family: inherit;
+}
+
+.emergency-form button {
+  background-color: var(--emergency-red);
+  color: var(--text-light);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.emergency-form button:hover {
+  background-color: var(--alert-orange);
+}
+
+#formMessage {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== NEARBY SERVICES ===== */
+.nearby {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.nearby h2 {
+  color: var(--emergency-red);
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+body.dark-mode {
+  --light-bg: #1e1e1e;
+  --text-dark: #f0f0f0;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .card {
+  background: #2a2a2a;
+}
+
+/* ===== CHECKLIST ===== */
+
+.checklist-section {
+  padding: 50px 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.checklist-section h2 {
+  color: var(--emergency-red);
+  margin-bottom: 30px;
+}
+
+.checklist-container {
+  background: var(--light-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff3f0;
+  border-left: 5px solid var(--emergency-red);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.check-item:hover {
+  transform: translateX(5px);
+}
+
+.checklist-box {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checklist-box:checked {
+  accent-color: var(--safe-green);
+}
+
+
+.progress-box {
+  margin-top: 30px;
+  padding: 25px;
+  background: var(--light-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.progress-box h3 {
+  color: var(--emergency-red);
+  margin-bottom: 10px;
+}
+
+#progressText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progressFill {
+  width: 0%;
+  height: 100%;
+  background: var(--safe-green);
+  transition: width 0.4s ease;
+
+}
+
+
+/* ===== SEARCH BOX ===== */
+
+.search-box {
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+#contactSearch {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--emergency-red);
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+
+#contactSearch:focus {
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+}
+
+/* ===== FIRST AID SHOW / HIDE ===== */
+
+.aid-toggle {
+  display: block;
+  margin: 0 auto 20px;
+  background-color: var(--emergency-red);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.aid-toggle:hover {
+  background-color: var(--alert-orange);
+}
+
+.aid-content {
+  display: none;
+}
+
+.aid-content.show {
+  display: block;
+}
+/* ========================================
+   EMERGENCY CATEGORY
+======================================== */
+
+.category-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.category-section h2 {
+  color: var(--emergency-red);
+  margin-bottom: 25px;
+}
+
+#emergencyCategory {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  border: 2px solid var(--emergency-red);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--light-bg);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.emergency-result {
+  margin-top: 30px;
+  padding: 25px;
+  background: var(--light-bg);
+  border-left: 6px solid var(--emergency-red);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.emergency-result h3 {
+  color: var(--emergency-red);
+  margin-bottom: 15px;
+}
+
+.emergency-result ul {
+  padding-left: 25px;
+}
+
+.emergency-result li {
+  margin-bottom: 10px;
+}
+
+
+
+.emergency-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.emergency-popup.show {
+  display: flex;
+}
+
+.popup-content {
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+  color: var(--emergency-red);
+  margin-bottom: 10px;
+}
+
+.popup-content > p {
+  margin-bottom: 20px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #555;
+}
+
+.emergency-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emergency-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--emergency-red);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.emergency-option:hover {
+  background: var(--alert-orange);
+  transform: translateY(-2px);
+}
+
+.emergency-option span {
+  font-size: 0.9rem;
+}
+
+.popup-warning {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
+/* ===== EMERGENCY POPUP ===== */
+
+.emergency-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.emergency-popup.show {
+  display: flex;
+}
+
+.popup-content {
+  background: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-content h2 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+.emergency-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.emergency-option {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #d32f2f;
+  border-radius: 8px;
+  background: white;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emergency-option:hover {
+  background: #ffe5e5;
+}
+
+.emergency-option span {
+  color: #d32f2f;
+}
+
+.popup-warning {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+.report-form {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.report-form h2 {
+  text-align: center;
+  color: var(--emergency-red);
+  margin-bottom: 25px;
+}
+
+#emergencyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#emergencyForm input,
+#emergencyForm select,
+#emergencyForm textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+#emergencyForm input:focus,
+#emergencyForm select:focus,
+#emergencyForm textarea:focus {
+  border-color: var(--emergency-red);
+}
+
+#emergencyForm textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#emergencyForm button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--emergency-red);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#emergencyForm button:hover {
+  background: var(--alert-orange);
+}
+
+#formMessage {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+/* >>>>>>> main */
 }

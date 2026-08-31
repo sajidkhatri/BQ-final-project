@@ -1,3 +1,77 @@
+<!-- <<<<<<< sajid-khatri -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Hub - Emergency Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🚨 Emergency Hub</div>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacts.html">Emergency Contacts</a></li>
+        <li><a href="firstaid.html">First Aid</a></li>
+        <li><a href="form.html" class="active">Emergency Form</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="firstaid" id="intro">
+    <h2>Emergency Form</h2>
+    <p style="margin-bottom: 15px;">
+      Fill out this form to organize the key details of an emergency — your name, contact number, the type of emergency, a description, and your location. Having this written down clearly can help you communicate faster when you call for help.
+    </p>
+    <p>
+      <strong>Note:</strong> This site has no backend, so the form does not send data anywhere or notify any responders. It's a tool to help you prepare and organize information before you make your call. For any real emergency, call Ambulance (1122), Police (15), or Fire (16) directly.
+    </p>
+  </section>
+
+  <section class="report-form" id="form">
+    <h2>Fill In the Details</h2>
+    <form id="emergencyForm">
+      <input type="text" id="fullName" placeholder="Your Name" required>
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+      <select id="emergencyType" required>
+        <option value="">Select Emergency Type</option>
+        <option value="medical">Medical</option>
+        <option value="fire">Fire</option>
+        <option value="crime">Crime</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea id="description" placeholder="Describe the emergency..." required></textarea>
+      <input type="text" id="location" placeholder="Location">
+      <button type="button" id="detectLocationBtn">📍 Use My Location</button>
+      <button type="submit"> <b>submit</b></button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <section class="firstaid" id="after-submitting">
+    <h2>Using This Form</h2>
+    <ul>
+      <li>Fill it in as you would explain the situation over the phone.</li>
+      <li>Use "Use My Location" to auto-fill your coordinates if needed.</li>
+      <li>Once reviewed, read the details aloud when you call emergency services.</li>
+      <li>This form stays on your device only — nothing is transmitted or stored elsewhere.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Emergency Hub &copy; 2026</p>
+    <p><strong>Disclaimer:</strong> This site is not a substitute for official emergency services. Always call your local emergency number directly in a life-threatening situation.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,4 +150,5 @@
 
   <script src="script.js"></script>
 </body>
+<!-- >>>>>>> main -->
 </html>
